@@ -76,7 +76,7 @@
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-1);
   font-family: var(--font-family-content);
   line-height: 1.6;
 }
@@ -121,8 +121,8 @@ img {
       12,
       minmax(min-content, 12.8rem)
     ) [container-end];
-  justify-content: center;
   grid-template-rows: repeat(9, min-content);
+  justify-content: center;
 }
 
 .layout {
@@ -137,6 +137,7 @@ img {
   align-items: center;
   justify-content: space-between;
   column-gap: 2rem;
+  position: relative;
 }
 
 .header::after {
@@ -165,7 +166,7 @@ img {
 
 .header__nav--link {
   font-size: var(--font-size-st-sc);
-  color: var(--color-primary-7);
+  color: var(--color-primary-6);
   transition: all 0.35s ease-in;
 }
 
@@ -192,8 +193,12 @@ img {
   top: 0;
   transform: translateX(-50%);
   height: 100%;
-  width: 100%;
+  width: 90%;
   z-index: -1;
+}
+
+.hero__bg img {
+  border-radius: 1rem;
 }
 
 .hero__content {
@@ -203,19 +208,14 @@ img {
 }
 
 .hero__content--mini-title {
-  font-size: var(--font-size-st-mc);
-  color: var(--color-secondary-1);
+  font-size: var(--font-size-st-m);
+  color: var(--color-primary-1);
 }
 
 .hero__content--title {
   font-size: var(--font-size-d-l);
-  color: var(--color-secondary-1);
+  color: var(--color-primary-1);
   text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.hero__content--title span {
-  display: block;
 }
 
 .hero__content--para {
@@ -225,6 +225,7 @@ img {
 
 .hero__content--para span {
   display: block;
+  font-size: var(--font-size-st-m);
 }
 
 .hero__content--links {
