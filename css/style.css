@@ -137,7 +137,6 @@ img {
   align-items: center;
   justify-content: space-between;
   column-gap: 2rem;
-  position: relative;
 }
 
 .header::after {
@@ -160,18 +159,18 @@ img {
 
 .header__nav {
   display: flex;
-  justify-self: flex-end;
+  justify-self: ;
   column-gap: 2rem;
 }
 
 .header__nav--link {
   font-size: var(--font-size-st-sc);
-  color: var(--color-primary-9);
+  color: var(--color-primary-7);
   transition: all 0.35s ease-in;
 }
 
 .header__nav--link:first-child {
-  color: var(--color-primary-1);
+  color: var(--color-primary-4);
 }
 
 .header__nav--link:hover {
@@ -204,13 +203,19 @@ img {
 }
 
 .hero__content--mini-title {
-  font-size: var(--font-size-st-sc);
+  font-size: var(--font-size-st-mc);
   color: var(--color-secondary-1);
 }
 
 .hero__content--title {
   font-size: var(--font-size-d-l);
   color: var(--color-secondary-1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero__content--title span {
+  display: block;
 }
 
 .hero__content--para {
