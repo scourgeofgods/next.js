@@ -134,8 +134,10 @@ img {
 .header {
   padding: var(--padding-d-m-v) var(--padding-d-l-h);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   column-gap: 2rem;
+  position: relative;
 }
 
 .header::after {
@@ -144,22 +146,22 @@ img {
   bottom: 50rem;
   top: 0;
   left: 0;
-  height: 50rem;
+  height: 49.5rem;
   width: 100%;
   background-color: var(--color-secondary-9);
-  clip-path: polygon(0 0, 100% 1%, 100% 85%, 0% 100%);
-  z-index: -1;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  z-index: -12;
 }
 
 .header__logo {
-  font-size: var(--font-size-st-m);
+  font-size: var(--font-size-st-mc);
   color: var(--color-primary-4);
 }
 
 .header__nav {
   display: flex;
-  align-items: center;
-  column-gap: 3rem;
+  justify-self: flex-end;
+  column-gap: 2rem;
 }
 
 .header__nav--link {
@@ -255,4 +257,66 @@ img {
 .hero__content--links__started:hover {
   background-color: var(--color-secondary-9);
   color: var(--color-secondary-1);
+}
+
+/* Header Navbar Hamburger Menu Responsive */
+
+@media screen and (max-width: 768px) {
+  .sec__padd {
+    padding: var(--padding-d-s-v) var(--padding-d-mc-h);
+  }
+  .header__nav {
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--padding-d-mc-v) var(--padding-d-l-h);
+    background-color: var(--color-secondary-9);
+    min-height: 100vh;
+    gap: 4rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 19;
+    transform: translateX(400rem);
+  }
+  .hamburger {
+    height: 5rem;
+    width: 8rem;
+    top: 2rem;
+    right: 5rem;
+    padding: var(--padding-st-s-v);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 20;
+  }
+  .hamburger__line {
+    height: 2px;
+    background-color: var(--color-primary-1);
+  }
+  .hamburger__line:first-child {
+    width: 50%;
+    transition: all 0.35s ease-in;
+  }
+  .hamburger__line:nth-child(2) {
+    transition: all 0.15s ease-in;
+  }
+  .hamburger__line:last-child {
+    width: 50%;
+    transition: all 0.35s ease-in;
+    align-self: flex-end;
+  }
+  .show-navbar {
+    transform: translateX(0);
+  }
+  .hamburger__line-1 {
+    transform: rotate(45deg) translateX(1.7rem) translateY(-0.2rem);
+  }
+  .hamburger__line-2 {
+    visibility: hidden;
+  }
+  .hamburger__line-3 {
+    transform: rotate(-45deg) translateX(-0.2rem) translateY(-2.1rem);
+  }
 }
