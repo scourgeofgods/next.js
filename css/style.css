@@ -15,6 +15,10 @@
 
 /* General Styles */
 
+html {
+  scroll-behaviour: smooth;
+}
+
 :root {
   font-size: 62.5%;
   /* Font Family */
@@ -182,7 +186,6 @@ img {
   height: 80vh;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   position: relative;
 }
 
@@ -324,5 +327,8 @@ img {
   }
   .hamburger__line-3 {
     transform: rotate(-45deg) translateX(-0.2rem) translateY(-2.1rem);
+  }
+  .hero {
+    align-items: center;
   }
 }
