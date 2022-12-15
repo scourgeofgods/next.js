@@ -16,9 +16,6 @@
 
 /* General Styles */
 
-html {
-    scroll-behaviour: smooth;
-}
 
 :root {
     font-size: 62.5%;
@@ -165,7 +162,6 @@ img {
 
 .header__nav {
     display: flex;
-    justify-self: ;
     column-gap: 2rem;
 }
 
@@ -202,10 +198,11 @@ img {
 }
 
 .hero__content {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .hero__content--mini-title {
@@ -230,9 +227,11 @@ img {
 }
 
 .hero__content--links {
-    margin-top: 2rem;
+
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .hero__content--links__contact,
@@ -327,7 +326,11 @@ img {
     .hamburger__line-3 {
         transform: rotate(-45deg) translateX(-0.2rem) translateY(-2.1rem);
     }
-    .hero {
-        align-items: center;
+    .hero__content{
+        flex-basis: auto;
+    }
+ 
+    .hero__bg{
+        width:100% ;
     }
 }
